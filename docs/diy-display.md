@@ -10,7 +10,6 @@ A hardware DCDU shows the same screen as the web page, and its keys work the sam
 |---|---|
 | **Guition JC4827W543C** | ESP32-S3 board with a 4.3" 480×272 screen (AliExpress). The firmware is ready for it. Other boards: see [below](#other-boards). |
 | USB-C data cable | Not a charge-only cable |
-| Optional: 12 push-buttons, 1 LED | DCDU keys and the ATC MSG light |
 
 ## Build and upload the firmware
 
