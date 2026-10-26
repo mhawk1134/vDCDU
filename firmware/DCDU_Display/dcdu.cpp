@@ -1,4 +1,4 @@
-// vDCDU display firmware. Copyright (c) 2026 mhawk1134 (https://github.com/mhawk1134/vDCDU)
+// vDCDU display firmware. Copyright (c) 2026 SkySense Labs (https://www.skysenselabs.com)
 // PolyForm Noncommercial License 1.0.0: see firmware/LICENSE.md.
 #include <Arduino.h>
 // DCDU display. Ready-made for the Guition JC4827W543C (ESP32-S3, 4.3" 480x272 NV3041A

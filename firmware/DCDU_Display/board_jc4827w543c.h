@@ -1,4 +1,4 @@
-// vDCDU display firmware. Copyright (c) 2026 mhawk1134 (https://github.com/mhawk1134/vDCDU)
+// vDCDU display firmware. Copyright (c) 2026 SkySense Labs (https://www.skysenselabs.com)
 // PolyForm Noncommercial License 1.0.0: see firmware/LICENSE.md.
 #pragma once
 // Guition JC4827W543C: ESP32-S3 (WROOM-1-N4R8: 4 MB flash, 8 MB PSRAM), 4.3" 480x272 IPS,

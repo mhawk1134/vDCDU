@@ -72,6 +72,6 @@ The **licensor** is the individual or entity offering these terms, and the **sof
 
 **Use** means anything you do with the software requiring one of your licenses.
 
-Required Notice: Copyright (c) 2026 mhawk1134 (https://github.com/mhawk1134/vDCDU)
+Required Notice: Copyright (c) 2026 SkySense Labs (https://www.skysenselabs.com)
 
 The font files FreeMonoBold9pt7b.h and FreeMonoBold12pt7b.h are not covered by this licence: they are GNU FreeFont, under the GNU GPL 3 with the font exception.

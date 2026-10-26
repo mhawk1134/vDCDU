@@ -1,4 +1,4 @@
-// vDCDU display firmware. Copyright (c) 2026 mhawk1134 (https://github.com/mhawk1134/vDCDU)
+// vDCDU display firmware. Copyright (c) 2026 SkySense Labs (https://www.skysenselabs.com)
 // PolyForm Noncommercial License 1.0.0: see firmware/LICENSE.md.
 #pragma once
 // Which board this firmware is built for. Included by dcdu.cpp only.
