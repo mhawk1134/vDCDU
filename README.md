@@ -32,7 +32,7 @@ Get **`vDCDU-Setup-<version>.exe`** from the [latest release](../../releases/lat
 
 ## Build your own display
 
-The display firmware is in [`firmware/`](firmware/) as an Arduino IDE sketch. It's ready to build for the **Guition JC4827W543C** (an ESP32-S3 board with a 4.3" 480×272 screen, sold on AliExpress), and each release also has a ready-made firmware file for that board. For other boards, screens and key wiring, see the [DIY display guide](docs/diy-display.md).
+The display firmware is in [`firmware/`](firmware/) as an Arduino IDE sketch. It's ready to build for the **Guition JC4827W543C** (an ESP32-S3 board with a 4.3" 480×272 screen, sold on AliExpress): download it (green **Code** button → **Download ZIP**), set your key pins in `config.h`, and upload it with the Arduino IDE. For other boards and screens, see the [DIY display guide](docs/diy-display.md).
 
 There's no ready-made display for sale. If you build one, please share it in [Discussions](../../discussions).
 

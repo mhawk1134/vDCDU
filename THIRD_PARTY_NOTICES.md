@@ -17,7 +17,7 @@ The setup program installs these with the program. Their licence texts are insta
 
 ## In the display firmware
 
-The firmware source in `firmware/` doesn't include these libraries; the Arduino IDE installs them (see the [DIY display guide](docs/diy-display.md)). The ready-made firmware files on the releases page are built from this source with them. You can rebuild that firmware yourself from the source here, with the same or changed versions of these libraries.
+The firmware source in `firmware/` doesn't include these libraries; the Arduino IDE installs them when you build it (see the [DIY display guide](docs/diy-display.md)).
 
 | Component | Licence |
 |---|---|

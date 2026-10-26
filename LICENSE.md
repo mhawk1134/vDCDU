@@ -7,7 +7,7 @@ This repository holds three kinds of things, each under its own licence.
 | What | Where | Licence |
 |---|---|---|
 | The vDCDU program | The setup program on the [releases page](../../releases) | [vDCDU licence](#the-vdcdu-program) below: free for personal use, closed source |
-| The display firmware | [`firmware/`](firmware/), and the ready-made firmware files on the releases page | [PolyForm Noncommercial 1.0.0](firmware/LICENSE.md) |
+| The display firmware | [`firmware/`](firmware/) | [PolyForm Noncommercial 1.0.0](firmware/LICENSE.md) |
 | The documentation and images | [`docs/`](docs/), this README | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) |
 
 Third-party components keep their own licences: see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

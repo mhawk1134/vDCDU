@@ -5,8 +5,7 @@ A hardware DCDU for your cockpit shows exactly the same screen as the web page, 
 > Install vDCDU on the PC first ([installation guide](install.md)) and check the web DCDU works.
 
 - [The easy way: Guition JC4827W543C](#the-easy-way-guition-jc4827w543c)
-- [Install the ready-made firmware](#install-the-ready-made-firmware)
-- [Build the firmware yourself (Arduino IDE)](#build-the-firmware-yourself-arduino-ide)
+- [Build and upload the firmware (Arduino IDE)](#build-and-upload-the-firmware-arduino-ide)
 - [Connect it to vDCDU](#connect-it-to-vdcdu)
 - [Keys and the ATC MSG light](#keys-and-the-atc-msg-light)
 - [Other boards and screens](#other-boards-and-screens)
@@ -16,7 +15,7 @@ A hardware DCDU for your cockpit shows exactly the same screen as the web page, 
 
 ## The easy way: Guition JC4827W543C
 
-The firmware is ready-made for this board:
+The firmware is ready to build for this board:
 
 | Item | Notes |
 |---|---|
@@ -26,27 +25,9 @@ The firmware is ready-made for this board:
 | Optional: an LED | For the ATC MSG light |
 | Optional: 2.4 GHz Wi-Fi | Only to run the display without a cable to the PC. The ESP32 can't use 5 GHz networks. |
 
-## Install the ready-made firmware
+## Build and upload the firmware (Arduino IDE)
 
-No Arduino IDE needed. You need Chrome or Edge on the PC.
-
-1. Download **`vDCDU-firmware-jc4827w543c-<version>.zip`** from the [latest release](https://github.com/mhawk1134/vDCDU/releases/latest) and unzip it.
-2. On the vDCDU page, **Display** tab, turn off **Look for a display on USB** (only one program at a time can use the board's USB port).
-3. Plug the board into the PC.
-4. Open Espressif's web flasher: **[espressif.github.io/esptool-js](https://espressif.github.io/esptool-js/)**. Click **Connect**, pick the board's port (*USB JTAG/serial debug unit*) and click **Connect**.
-5. **New board:** click **Erase Flash** first and wait for it to finish. That removes the demo it came with.
-6. Under *Flash Address* type **`0x0`**, choose the file **`vdcdu-jc4827w543c-full.bin`**, and click **Program**. Wait until it says it's done (about a minute).
-7. Press the board's **RESET** button (or unplug and replug it), then turn **Look for a display on USB** back on.
-
-**You should see:** `WAITING FOR DATA`, and within a few seconds the same DCDU as on the web page. The **Display** tab shows a card for it with a green **USB**.
-
-**Updating later:** the same steps, without Erase Flash, but with the file **`vdcdu-jc4827w543c-update.bin`** at address **`0x10000`**. That keeps the display's Wi-Fi settings. (`…-full.bin` at `0x0` works too, but resets them.)
-
-**If Connect finds no port:** try another cable (many only charge). If it connects but fails to write: hold the board's **BOOT** button, press and release **RESET**, release **BOOT**, and try again. In that mode the board can always be written.
-
-## Build the firmware yourself (Arduino IDE)
-
-Needed for keys, an upside-down screen, or another board. You get the source in this repository's [`firmware/`](../firmware/) folder: click the green **Code** button on the [main page](https://github.com/mhawk1134/vDCDU) → **Download ZIP**, and unzip it.
+You build the firmware yourself, so it fits your wiring: key pins, an upside-down screen, or another board. You get the source in this repository's [`firmware/`](../firmware/) folder: click the green **Code** button on the [main page](https://github.com/mhawk1134/vDCDU) → **Download ZIP**, and unzip it.
 
 1. Install the **Arduino IDE 2** from [arduino.cc/en/software](https://www.arduino.cc/en/software).
 2. **File → Preferences → Additional boards manager URLs:** add `https://espressif.github.io/arduino-esp32/package_esp32_index.json`. Then **Tools → Board → Boards Manager**: install **esp32 by Espressif Systems** (tested with 3.3.x).
@@ -65,6 +46,10 @@ Needed for keys, an upside-down screen, or another board. You get the source in 
 | Port | the COM port that appeared when you plugged it in |
 
 7. Click **Upload** (the → arrow), then turn **Look for a display on USB** back on.
+
+**Upload fails?** Try another cable (many only charge), and close any Serial Monitor. If it still fails: hold the board's **BOOT** button, press and release **RESET**, release **BOOT**, and upload again. In that mode the board can always be written.
+
+**Updating later:** download the new version, copy your `config.h` (and `board_custom.h`, if you have one) into its `DCDU_Display` folder, and upload it the same way. The display keeps its Wi-Fi settings.
 
 **You should see:** `WAITING FOR DATA`, then the DCDU once vDCDU finds it.
 
@@ -112,7 +97,7 @@ If it loses vDCDU after showing the DCDU, the status line shows `LINK LOST` unti
 
 ## Keys and the ATC MSG light
 
-Keys need [your own build of the firmware](#build-the-firmware-yourself-arduino-ide). Wire each push-button between a free GPIO pin and **GND** (no resistor needed: the firmware turns on the pin's pull-up). Then put the GPIO numbers in `config.h`. Use `-1` for keys you don't fit; those stay usable on the web page.
+Wire each push-button between a free GPIO pin and **GND** (no resistor needed: the firmware turns on the pin's pull-up). Then put the GPIO numbers in `config.h` and upload the firmware again ([how](#build-and-upload-the-firmware-arduino-ide)). Use `-1` for keys you don't fit; those stay usable on the web page.
 
 | Setting | Key |
 |---|---|
