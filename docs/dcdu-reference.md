@@ -5,7 +5,7 @@ vDCDU emulates the DCDU (Datalink Control and Display Unit) found in Airbus cock
 ## Same as the real DCDU
 
 - Screen layout: header, 5 message lines of 30 characters, prompts beside the four line keys, status line, `MSG n / m`, `PG n / m`
-- Colours: green header, white text, cyan values and prompts, amber faults
+- Colors: green header, white text, cyan values and prompts, amber faults
 - Keys: line keys, MSG−/+, PGE−/+, BRT/DIM, PRINT, ATC MSG light
 - Long messages in pages; reply keys locked until every page is read
 - CPDLC answers in two steps (choose, then SEND); STBY sent at once
