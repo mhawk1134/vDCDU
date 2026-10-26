@@ -11,7 +11,7 @@ On VATSIM, controllers send PDCs (pre-departure clearances) and private messages
 - **PDCs from vPilot**, laid out like a real airline PDC
 - **Private messages, frequency text, SELCAL and ATIS**, all on the DCDU
 - **Runs in a web browser**, on your sim PC or any tablet on your network
-- **Works like the real DCDU:** same screen, colours and keys
+- **Works like the real DCDU:** same screen, colors and keys
 - **Any station's ATIS** on the DCDU with one click, from the live VATSIM ATC list
 - **Optional: CPDLC through Hoppie's ACARS.** Answer ATC with WILCO, UNABLE, STANDBY and more, straight from the DCDU.
 - **Optional: a hardware DCDU** you build yourself, over USB or Wi-Fi
