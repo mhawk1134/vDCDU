@@ -1,0 +1,38 @@
+name: Something doesn't work
+description: A problem with vDCDU or the display firmware
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check [Troubleshooting](https://github.com/mhawk1134/vDCDU/blob/main/docs/troubleshooting.md) first.
+        **Never post your Hoppie logon code**, the contents of `hoppie_logon.txt`, or a `config.h` with your Wi-Fi password.
+  - type: input
+    id: version
+    attributes:
+      label: vDCDU version
+      description: Shown at the bottom of the vDCDU page, e.g. v0.3.0
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status indicators
+      description: What the Hoppie, vPilot and VATSIM data indicators under the DCDU say (a screenshot is fine).
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: The relevant part of `dcdu_bridge.log` (Start menu → vDCDU files).
+      render: text
+  - type: input
+    id: display
+    attributes:
+      label: Hardware display (if it's about one)
+      description: Board, firmware version, USB or Wi-Fi
