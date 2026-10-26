@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include <ArduinoJson.h>
 
-#define FW_VERSION "0.3.0-rc11"
+#define FW_VERSION "0.3.0-rc12"
 
 // config.h is optional: without it the display starts in USB mode and Wi-Fi is set
 // up from the DCDU web page. Its values are only first-start defaults.

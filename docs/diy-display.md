@@ -2,6 +2,8 @@
 
 A hardware DCDU shows the same screen as the web page, and its keys work the same. It connects to vDCDU by USB or Wi-Fi.
 
+![A home-built vDCDU display](images/vdcdu-display.jpg)
+
 ## Parts
 
 | Part | Notes |

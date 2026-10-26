@@ -4,7 +4,7 @@
 
 On VATSIM, controllers send PDCs (pre-departure clearances) and private messages through vPilot. vDCDU shows them on a DCDU screen, so you don't have to alt-tab to vPilot or keep another window open. Use it with any aircraft.
 
-![vDCDU in a web browser](docs/images/vdcdu-browser.png)
+![vDCDU in a web browser, showing a PDC from vPilot](docs/images/vdcdu-browser.png)
 
 ## What it does
 
@@ -12,8 +12,25 @@ On VATSIM, controllers send PDCs (pre-departure clearances) and private messages
 - **Private messages, frequency text, SELCAL and ATIS**, all on the DCDU
 - **Runs in a web browser**, on your sim PC or any tablet on your network
 - **Works like the real DCDU:** same screen, colours and keys
+- **Any station's ATIS** on the DCDU with one click, from the live VATSIM ATC list
 - **Optional: CPDLC through Hoppie's ACARS.** Answer ATC with WILCO, UNABLE, STANDBY and more, straight from the DCDU.
-- **Optional: build your own hardware DCDU** with the included firmware
+- **Optional: a hardware DCDU** you build yourself, over USB or Wi-Fi
+
+| On a tablet | ATC info: any ATIS on the DCDU |
+|---|---|
+| ![vDCDU on a tablet](docs/images/vdcdu-tablet.jpg) | ![ATC info tab](docs/images/vdcdu-atc-info.jpg) |
+
+## Hardware display
+
+![A home-built vDCDU display showing an ATIS](docs/images/vdcdu-display.jpg)
+
+Build a real DCDU for your cockpit from a 4.3" ESP32 display board. It shows the same screen as the web page, and its keys work the same.
+
+- Connects by **USB** (plug in, nothing to set up) or **Wi-Fi** (set up once from the web page)
+- Wire your own keys and ATC MSG light to any free pins
+- Ready to build for the Guition JC4827W543C; other ESP32 boards can be added
+
+**→ [Build instructions](docs/diy-display.md)**
 
 ## What you need
 

@@ -52,7 +52,10 @@ CPDLC messages come from Hoppie's ACARS and your answers go back to ATC through 
 ## The web page tabs
 
 - **Messages:** this flight's messages. Click one to show it.
-- **ATC info:** stations online for your flight. **Show on DCDU** sends their ATIS or info to the DCDU.
+- **ATC info:** stations online for your flight, or worldwide. **Show on DCDU** sends their ATIS or info to the DCDU.
+
+  ![ATC info tab](images/vdcdu-atc-info.jpg)
+
 - **Filters:** which messages appear.
 - **Display:** your [hardware display](diy-display.md), if you have one.
 
